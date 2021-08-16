@@ -163,7 +163,7 @@ class ViewController: UIViewController {
         receivedData.append(number)
         sumArray = sumArray + number
         avgArray = Double(sumArray)/Double(receivedData.count + timer)
-        maximum = max(maximum, max(receivedData.max() ?? 0, receivedData.min() ?? 0))
+        maximum = max(maximum, receivedData.max() ?? 0)
         
         if (receivedData.count > 100) {
             receivedData.removeFirst(receivedData.count-100)
